@@ -1,79 +1,104 @@
 .app {
-    margin: 0 auto;
-    max-width: 1200px;
-    height: 100vh;
-    color: #005580;
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 100vh;
+  color: #005580;
 }
 
 h1 {
-    margin: 0;
-    padding-top: 25px;
-    text-align: center;
+  margin: 0;
+  padding-top: 25px;
+  text-align: center;
 }
 
 .list {
-    margin: 20px auto;
-    max-width: 80%;
-    padding: 10px;
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
+  margin: 20px auto;
+  max-width: 80%;
+  padding: 10px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
 
-    &-item {
-        padding: 5px 12px;
-        box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.3);
-        border-radius: 5px;
+  &-item {
+    padding: 5px 12px;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
 
-        &__title {
-            margin-bottom: 5px;
-            font-weight: 700;
-            font-size: 18px;
-        }
-
-        &__text {
-            line-height: 1.2;
-        }
-
-        &:not(:last-child) {
-            margin-bottom: 10px;
-        }
+    &__title {
+      margin-bottom: 5px;
+      font-weight: 700;
+      font-size: 18px;
     }
+
+    &__text {
+      line-height: 1.2;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .error-text {
-    text-align: center;
-    color: #f55050;
+  text-align: center;
+  color: #f55050;
 }
 
 .pagination {
-    text-align: center;
-    user-select: none;
+  text-align: center;
+  user-select: none;
 
-    &__item {
-        cursor: pointer;
-        color: inherit;
-        font-size: 16px;
-        padding: 0 5px;
-        font-weight: 500;
-        background: none;
-        border: none;
-        outline: none;
+  &__item {
+    cursor: pointer;
+    color: inherit;
+    font-size: 16px;
+    padding: 0 5px;
+    font-weight: 500;
+    background: none;
+    border: none;
+    outline: none;
 
-        &:hover {
-            color: red;
-        }
-
-        &:disabled {
-            opacity: .5;
-            cursor: not-allowed;
-
-            &:hover {
-                color: inherit;
-            }
-        }
-
-        &--current {
-            color: red;
-        }
+    &:hover {
+      color: red;
     }
+
+    &:disabled {
+      opacity: .5;
+      cursor: not-allowed;
+
+      &:hover {
+        color: inherit;
+      }
+    }
+
+    &--current {
+      color: red;
+    }
+  }
+}
+
+.spinner {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.update {
+  display: flex;
+  justify-content: center;
+
+  &-button {
+    margin: 15px;
+    background: none;
+    padding: 10px;
+    background: #005580;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background: #026fa6;
+    }
+  }
 }

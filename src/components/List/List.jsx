@@ -34,7 +34,7 @@ const List = ({posts, limit}) => {
     if (posts?.length) {
       setPaginatedPosts(posts.slice((currentPage - 1) * limit, currentPage * limit))
     }
-  }, [posts, currentPage]);
+  }, [posts, currentPage, limit]);
 
   return (
       <>
