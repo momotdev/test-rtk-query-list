@@ -6,7 +6,7 @@ import {RotatingLines} from "react-loader-spinner";
 const LIMIT = 7;
 
 function App() {
-  const {data: posts, error, isLoading} = useGetAllPostsQuery();
+  const {data: posts, error, isLoading, refetch} = useGetAllPostsQuery();
 
   return (
       <div className="app">
@@ -23,7 +23,7 @@ function App() {
         {!error && !isLoading && <List posts={posts} limit={LIMIT}/>}
         {error && <div className='error-text'>An error occurred while receiving data. Please try again later.</div>}
         <div className="update">
-          <button className="update-button">Update data</button>
+          <button className="update-button" onClick={refetch}>Update data</button>
         </div>
       </div>
   );
